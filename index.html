@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Form - JsonPowerDB</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <!-- JsonPowerDB Commons Library -->
+    <script src="https://www.login2explore.com/jpdb/libs/jpdb-commons.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container-main">
+        <!-- Form Header -->
+        <div class="form-header">
+            <h1>Employee Information Form</h1>
+            <p>Manage Employee Data with JsonPowerDB</p>
+        </div>
+
+        <!-- Alert Message Container -->
+        <div id="alertMessage" class="alert-custom"></div>
+
+        <!-- Employee Form -->
+        <form id="empForm" novalidate>
+            <!-- Employee ID Field -->
+            <div class="form-group">
+                <label for="empId" class="form-label">
+                    Employee ID
+                    <span class="status-badge" id="statusBadge" style="display: none;"></span>
+                </label>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    id="empId" 
+                    placeholder="Enter Employee ID"
+                    autocomplete="off"
+                    required
+                >
+            </div>
+
+            <!-- Employee Name Field -->
+            <div class="form-group">
+                <label for="empName" class="form-label">Employee Name</label>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    id="empName" 
+                    placeholder="Enter Employee Name"
+                    disabled
+                    required
+                >
+            </div>
+
+            <!-- Salary Field -->
+            <div class="form-group">
+                <label for="empSalary" class="form-label">Salary</label>
+                <input 
+                    type="number" 
+                    class="form-control" 
+                    id="empSalary" 
+                    placeholder="Enter Salary"
+                    disabled
+                    required
+                    step="0.01"
+                >
+            </div>
+
+            <!-- HRA Field -->
+            <div class="form-group">
+                <label for="empHRA" class="form-label">HRA (House Rent Allowance)</label>
+                <input 
+                    type="number" 
+                    class="form-control" 
+                    id="empHRA" 
+                    placeholder="Enter HRA"
+                    disabled
+                    required
+                    step="0.01"
+                >
+            </div>
+
+            <!-- DA Field -->
+            <div class="form-group">
+                <label for="empDA" class="form-label">DA (Dearness Allowance)</label>
+                <input 
+                    type="number" 
+                    class="form-control" 
+                    id="empDA" 
+                    placeholder="Enter DA"
+                    disabled
+                    required
+                    step="0.01"
+                >
+            </div>
+
+            <!-- Deduction Field -->
+            <div class="form-group">
+                <label for="empDeduction" class="form-label">Deduction</label>
+                <input 
+                    type="number" 
+                    class="form-control" 
+                    id="empDeduction" 
+                    placeholder="Enter Deduction"
+                    disabled
+                    required
+                    step="0.01"
+                >
+            </div>
+
+            <!-- Control Buttons -->
+            <div class="button-group">
+                <button type="button" class="btn-custom btn-save" id="saveBtn" onclick="saveData()" disabled>
+                    Save
+                </button>
+                <button type="button" class="btn-custom btn-change" id="changeBtn" onclick="changeData()" disabled>
+                    Change
+                </button>
+                <button type="button" class="btn-custom btn-reset" id="resetBtn" onclick="resetForm()" disabled>
+                    Reset
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
