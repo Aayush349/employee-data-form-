@@ -16,7 +16,7 @@ var jpdbINL = "/inl";
 
 var DB_NAME = "EMP-DB";
 var REL_NAME = "EmpData";
-var TOKEN = "90938270|-31949219|50491440";  
+var TOKEN = "764066764|7385821544069761111|764066854";  
 
 // ============================================
 // INITIALIZATION
